@@ -1,3 +1,0 @@
-# 2018-IWOOF-GESTAO-DE-PET-SHOPS
-
-## app ionic
