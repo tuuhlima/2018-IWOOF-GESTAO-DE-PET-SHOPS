@@ -61,6 +61,26 @@ export class HomePage {
       });
     });
   }
+  
+  selectSearchResult(item){
+    this.clearMarkers();
+    this.autocompleteItems = [];
+
+    this.geocoder.geocode({'placeId': item.place_id}, (results, status) => {
+      if(status === 'OK' && results[0]){
+        // let position = {
+        //     lat: results[0].geometry.location.lat,
+        //     lng: results[0].geometry.location.lng
+        // };
+        let marker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: this.map
+        });
+        this.markers.push(marker);
+        this.map.setCenter(results[0].geometry.location);
+      }
+    })
+  }
 
   tryGeolocation(){
     this.clearMarkers();
