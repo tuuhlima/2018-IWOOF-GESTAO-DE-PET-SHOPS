@@ -3,6 +3,7 @@ import { Component, NgZone } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LoadingController } from 'ionic-angular';
 import { } from '@types/googlemaps'; /* import google maps*/
+import { AboutPage } from '../about/about';
 
 @Component({
   selector: 'page-home',
@@ -107,6 +108,10 @@ export class HomePage {
       this.markers[i].setMap(null);
     }
     this.markers = [];
+  }
+
+  searchlocalResult(){
+    this.navCtrl.push(AboutPage);
   }
 
 }
