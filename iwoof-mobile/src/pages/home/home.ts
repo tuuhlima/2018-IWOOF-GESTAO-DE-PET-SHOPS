@@ -10,11 +10,14 @@ import { } from '@types/googlemaps'; /* import google maps*/
 })
 export class HomePage {
 
-  autocompleteItems: any;
+  map: any;
+  markers: any;
   autocomplete: any;
   GoogleAutocomplete: any;
-  map: any; 
-  google: any;
+  GooglePlaces: any;
+  geocoder: any
+  autocompleteItems: any;
+  loading: any;
 
   constructor(
     public navCtrl: NavController,
@@ -22,8 +25,12 @@ export class HomePage {
     public geolocation: Geolocation,
     public loadingCtrl: LoadingController
   ) {
-    this.autocomplete = { input: '' };
+    this.autocomplete = {
+      input: ''
+    };
     this.autocompleteItems = [];
+    this.markers = [];
+    this.loading = this.loadingCtrl.create();
   }
   
   ionViewDidEnter(){
@@ -32,6 +39,10 @@ export class HomePage {
       center: { lat: -34.9011, lng: -56.1645 },
       zoom: 15
     });
+    this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
+    this.geocoder = new google.maps.Geocoder;
+    let elem = document.createElement("div")
+    this.GooglePlaces = new google.maps.places.PlacesService(elem);
     this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
   }
 
@@ -49,6 +60,33 @@ export class HomePage {
         });
       });
     });
+  }
+
+  tryGeolocation(){
+    this.clearMarkers();
+    this.geolocation.getCurrentPosition().then((resp) => {
+      let pos = {
+        lat: resp.coords.latitude,
+        lng: resp.coords.longitude
+      };
+      let marker = new google.maps.Marker({
+        position: pos,
+        map: this.map,
+        title: 'I am here!'
+      });
+      this.markers.push(marker);
+      this.map.setCenter(pos);
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
+  }
+
+  clearMarkers(){
+    for (var i = 0; i < this.markers.length; i++) {
+      console.log(this.markers[i])
+      this.markers[i].setMap(null);
+    }
+    this.markers = [];
   }
 
 }
