@@ -3,6 +3,44 @@
         <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
         </ion-searchbar>
     </ion-navbar>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-3>
+                <div class="custom_icon">
+                    <a>
+                        <ion-icon name="icon-petshop"></ion-icon>
+                        <p>Pet Shop</p>
+                    </a>
+                </div>
+            </ion-col>
+            <ion-col col-3>
+                <div class="custom_icon">
+                    <a>
+                        <ion-icon name="icon-caregivers"></ion-icon>
+                        <p>Cuidadores</p>
+                    </a>
+                </div>
+            </ion-col>
+            <ion-col col-3>
+                <div class="custom_icon">
+                    <a>
+                        <ion-icon name="icon-hotel"></ion-icon>
+                        <p>Hoteis</p>
+
+                    </a>
+                </div>
+            </ion-col>
+            <ion-col col-3>
+                <div class="custom_icon">
+                    <a>
+                        <ion-icon name="icon-clinics"></ion-icon>
+                        <p>Clínicas</p>
+
+                    </a>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-header>
 
 

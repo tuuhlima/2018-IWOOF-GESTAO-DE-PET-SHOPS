@@ -1,3 +1,40 @@
 page-home {
+    .row {
+        text-align: center;
+    }
 
+    .custom_icon {
+        position: relative;
+        font-size: 32px;
+        color: #000000;
+        p {
+            font-size: 13px;
+            margin-top: 0px;
+        }
+        a {
+            color: #000000;
+        }
+    }
+    ion-icon {
+        &[class*="icon"] {
+          mask-size: contain;
+          mask-position: 50% 50%;
+          mask-repeat: no-repeat;
+          background: currentColor;
+          width: 1em;
+          height: 1em;
+        }
+        &[class*="icon-clinics"] {
+            mask-image: url(../assets/icon/clinics.svg);
+        }
+        &[class*="icon-hotel"] {
+            mask-image: url(../assets/icon/hotel.svg);
+        }
+        &[class*="icon-petshop"] {
+            mask-image: url(../assets/icon/petshop.svg);
+        }
+        &[class*="icon-caregivers"] {
+            mask-image: url(../assets/icon/004-person.svg);
+        }
+    }
 }
