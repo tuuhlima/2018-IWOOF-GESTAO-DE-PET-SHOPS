@@ -16,8 +16,8 @@ export class HomePage {
   }
 
 
-  test(){
-    console.log('test')
+  categories(category : string){
+    console.log(category)
   }
 
 }

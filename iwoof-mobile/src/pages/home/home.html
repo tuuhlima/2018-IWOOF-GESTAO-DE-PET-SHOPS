@@ -7,36 +7,35 @@
         <ion-row>
             <ion-col col-3>
                 <div class="custom_icon">
-                    <a>
+                    <button class="ion-button-icon" (click)="categories('petshop')">
                         <ion-icon name="icon-petshop"></ion-icon>
                         <p>Pet Shop</p>
-                    </a>
+                    </button>
                 </div>
             </ion-col>
             <ion-col col-3>
                 <div class="custom_icon">
-                    <a>
+                    <button class="ion-button-icon" (click)="categories('caregivers')">
                         <ion-icon name="icon-caregivers"></ion-icon>
                         <p>Cuidadores</p>
-                    </a>
+                    </button>
                 </div>
             </ion-col>
             <ion-col col-3>
-                <div class="custom_icon">
-                    <a>
+                <div class="custom_icon" (click)="categories('hotel')">
+                    <button class="ion-button-icon">
                         <ion-icon name="icon-hotel"></ion-icon>
                         <p>Hoteis</p>
 
-                    </a>
+                    </button>
                 </div>
             </ion-col>
             <ion-col col-3>
                 <div class="custom_icon">
-                    <a>
+                    <button class="ion-button-icon" (click)="categories('clinics')">
                         <ion-icon name="icon-clinics"></ion-icon>
                         <p>Clínicas</p>
-
-                    </a>
+                    </button>
                 </div>
             </ion-col>
         </ion-row>
