@@ -1,4 +1,6 @@
 page-home {
+
+    /*  Formatação dos icones   */
     .row {
         text-align: center;
     }
@@ -18,6 +20,11 @@ page-home {
         a {
             color: #000000;
         }
+    }
+
+    .custom_icon:focus, .custom_icon:active {
+       color: #000000;
+       opacity: 0.3;
     }
     ion-icon {
         &[class*="icon"] {
@@ -40,5 +47,65 @@ page-home {
         &[class*="icon-caregivers"] {
             mask-image: url(../assets/icon/004-person.svg);
         }
+    }
+
+
+    /*  Formatação do seartch*/
+    .searchbar-md .searchbar-input{
+        box-shadow: none !important;
+    }
+
+    .searchbar-md .searchbar-input {
+        padding-right: 45px !important;
+    }
+
+    /*  hearder  */
+
+    ion-header, .toolbar-background {
+        background-color: #6ADBD9 !important;
+    }
+
+    /* geolocation */
+
+    .geolocation {
+        min-height: 0px;
+        height: 25px !important;
+        background-color: #000000;
+        margin: 0px;
+        .label-md, .label-ios {
+            display: flex;
+            width: 20px !important;
+            margin: 0px;
+        }
+        p {
+            margin: 0 0 2px;
+            overflow: inherit;
+            font-size: 1.4rem;
+            line-height: normal;
+            text-overflow: inherit;
+            color: #ffffff;
+            padding: 10px 20px 2px 5px
+        }
+        .ion-button-icon {
+            left: 0px !important;
+            height: 100% !important;
+            position: absolute !important;
+            width: 100% !important;
+        }
+        .search-icon {
+            text-align: right;
+            width: 20px;
+            height: 20px;
+            float: right;
+            color: #ffffff;
+            background:bottom;
+        }
+        .search-icon:before {
+            font-size: x-large;
+        }
+    } 
+
+    .item-ios.item-block .item-inner, .item-md.item-block .item-inner {
+        border-bottom: 0px;
     }
 }
