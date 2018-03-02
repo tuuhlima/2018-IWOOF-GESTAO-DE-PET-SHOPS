@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
   
-  geolocation: string = 'R.Diamantina, 2-130, Paraisópolis-MG, 37660-000'
+  geolocation: string = 'R.Diamantina, 2-130, Paraisópolis-MG, 37660-000 15151515151151515'
   test: any = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -25,5 +25,6 @@ export class HomePage {
   getGeolocation() {
     this.test++;
   }
+
 
 }

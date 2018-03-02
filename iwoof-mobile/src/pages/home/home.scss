@@ -72,6 +72,7 @@ page-home {
         height: 25px !important;
         background-color: #000000;
         margin: 0px;
+        padding-left: 2px;
         .label-md, .label-ios {
             display: flex;
             width: 20px !important;
@@ -84,9 +85,10 @@ page-home {
             line-height: normal;
             text-overflow: inherit;
             color: #ffffff;
-            padding: 10px 20px 2px 5px
+            padding: 10px 20px 2px 6px
         }
         .ion-button-icon {
+            top: 0px !important;
             left: 0px !important;
             height: 100% !important;
             position: absolute !important;
